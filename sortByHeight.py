@@ -1,11 +1,15 @@
 def solution(a):
-    # swapping variables
-    # tmp = a
-    # a = b
-    # b = tmp
     i = 0
     j = 1
-    while j < len(a):
+    while i < len(a):
+        if a[i] == -1:
+            i += 1
+            j = i + 1
+        elif a[i] < a[j]:
+            tmp = a[i]
+            a[i] = a[j]
+            a[j] = tmp
+        i += 1
     return a
 
 
